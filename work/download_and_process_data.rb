@@ -41,6 +41,8 @@ cumul = 0
 	result[:cumul] << cumul
 end
 
-File.open( 'results.yaml', 'w' ) { |file| file.write( result.to_yaml ) }
+result[:series] = [ { name: 'Nombre de condammnations' }, data: result[:cumul] ]
+
+File.open( '../data/results.yaml', 'w' ) { |file| file.write( result.to_yaml ) }
 
 

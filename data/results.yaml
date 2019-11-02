@@ -770,7 +770,7 @@
 - 2017
 - 2018
 - 2019
-:cumul:
+:cumul: &1
 - 0
 - 0
 - 0
@@ -1541,3 +1541,6 @@
 - 447
 - 447
 - 448
+:series:
+- :name: Nombre de condammnations
+- :data: *1
