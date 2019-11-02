@@ -8,6 +8,9 @@ end
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
+activate :i18n
+activate :gzip
+
 # Per-page layout changes
 page '/*.xml', layout: false
 page '/*.json', layout: false
