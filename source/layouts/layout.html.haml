@@ -18,17 +18,14 @@
     -#= javascript_include_tag 'application', async: true
     -#= csrf_meta_tags
 
-    -#= stylesheet_link_tag 'site'
-    -#= javascript_include_tag 'site'
-
+    = stylesheet_link_tag 'bootstrap.min'
+    = stylesheet_link_tag 'site'
 
     %script{ src: '/javascripts/jquery-3.4.1.min.js' }
+    %script{ src: '/javascripts/bootstrap.bundle.min.js' }
 
     %script{ src: '/javascripts/highcharts.js' }
     %script{ src: '/javascripts/annotations.js' }
-    -#%script{ src: '/javascripts/highcharts-annotations.js' }
-
-      -#<script src="https://code.highcharts.com/highcharts.src.js"></script>
 
     %script{ src: '/javascripts/chart.js' }
 
