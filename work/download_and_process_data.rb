@@ -13,6 +13,7 @@ doc.xpath( '//tr' ).each do |e|
 		d = r.children[0]
 
 		if d.text?
+			puts "#{d.text.strip} -> #{d.text.strip.to_i}"
 			years << d.text.strip.to_i
 		else
 			begin
@@ -25,23 +26,23 @@ doc.xpath( '//tr' ).each do |e|
 end
 
 hash_data = {}
-years.sort.select{ |e| e > 1200 }.each do |year|
+years.sort.select{ |e| e >= 1275 }.each do |year|
 	hash_data[ year ] ||= 0
 	hash_data[ year ] += 1
 end
 
-pp hash_data
+# pp hash_data
 
 result = { years: [], cumul: [] }
 cumul = 0
 
-1250.upto( 2019 ).each do |year|
+1275.upto( 2019 ).each do |year|
 	cumul += hash_data[ year ] || 0
 	result[:years] << year
 	result[:cumul] << cumul
 end
 
-result[:series] = [ { name: 'Nombre de condammnations' }, data: result[:cumul] ]
+result[:series] = [ { name: 'Nombre de condammnations', data: result[:cumul] } ]
 
 File.open( '../data/results.yaml', 'w' ) { |file| file.write( result.to_yaml ) }
 
