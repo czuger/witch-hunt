@@ -1,0 +1,9 @@
+=select_tag :categories, id: :categories, class: 'form-control', :options => data.reg.categories
+
+%div{ id: :container, style: 'width:100%; height:400px;' }
+
+#complains_time
+
+#crime_increase
+
+=input_tag( :hidden, id: :insecurity_data, data: data.reg.to_json )
