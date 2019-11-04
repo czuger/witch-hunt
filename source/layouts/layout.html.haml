@@ -1,5 +1,5 @@
 !!!
-%html
+%html{ lang: current_page.data.lang }
   %head
     %meta{charset: 'utf-8' }
     %meta{content: 'IE=edge', 'http-equiv' => 'X-UA-Compatible' }
@@ -7,19 +7,10 @@
     %meta{content: '', name: 'description' }
     %meta{content: '', name: 'author' }
     %title
-      Les grandes chasses aux sorcières ne se sont pas produites au Moyen-Age
+      = current_page.data.title
 
     <script type="application/ld+json">
-    {
-    "@context":"http://schema.org",
-    "@type":"Article",
-    "Audience":{
-    "@type":"Audience",
-    "audienceType":"people interested in witchcraft"
-    },
-    "name":"Les grandes chasses aux sorcières ne se sont pas produites au Moyen-Age",
-    "description":"Eve business server is a tool that show potential earnings in Eve Online"
-    }
+    = current_page.data.google_data.to_json
     </script>
 
     / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
@@ -43,5 +34,5 @@
     %script{ src: '/javascripts/chart.js' }
 
   %body
-    .container-fluid
+    .container
       = yield
