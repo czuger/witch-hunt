@@ -75,6 +75,16 @@ function draw_chart()
                 },
                 text: 'Siècle des lumières'
             },
+
+            {
+                point: {
+                    x: 1562,
+                    y: data[0].data[1562-1275],
+                    xAxis: 0,
+                    yAxis: 0
+                },
+                text: 'Guerres de religions'
+            },
             // {
             //     point: {
             //         x: 1789,
