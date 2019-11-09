@@ -10,27 +10,58 @@
   },
   "name" : "Les chasses aux sorcières du Moyen-Age : une idée fausse",
   "description" : "Beaucoup de personnes croient que les chasses aux sorcières avaient lieu au moyen age, ce qui est complètement faux. Cet article vous explique pourquoi."
+  "keywords" : 'sorcières, chasses aux sorcières, moyen-âge, renaissance, guerre de trente ans'
 }
 ;;;
 
 %h1
   Les chasses aux sorcières du Moyen-Age : une idée fausse
 
+.img-right
+  = image_tag 'img1-small.jpg'
+
 %p
-  Cet article à pour but de tordre le cou à une idée fausse, mais qui est répétée à longueur de journée : les chasses aux sorcières du Moyen-Age.
-  Or il n'y a pas eu de chasses aux sorcières au Moyen-Age elles ont eu lieu pendant la renaissance et la guerre de trente-ans.
+  Cet article a pour but de tordre le cou à une idée fausse, mais qui est répétée à longueur de journée : les chasses aux sorcières du Moyen-Age.
+  Or il n'y a
+  %b
+    pas eu
+  de chasses aux sorcières au Moyen-Age elles ont eu lieu pendant la
+  %b
+    renaissance
+  et pendant la
+  %b
+    guerre de trente-ans.
 
 %p
   Je précise que cet article n'a pas pour but n'est pas de nier l'existence des chasses aux sorcières ou de minimiser les persécutions subies par les victimes, mais de recaler dans le temps ces évennements dramatiques.
 
-%h2 D'abord les chiffres
+%h2 Les chiffres
 
 %p
-  En se basant sur
-  = link_to 'la liste des condammnations', 'https://fr.wikipedia.org/wiki/Liste_des_victimes_de_chasses_aux_sorci%C3%A8res'
-
-  En effet, il est parfois aggacant
+  Le graphique suivant est basé sur
+  = link_to 'la liste des condammnations.', 'https://fr.wikipedia.org/wiki/Liste_des_victimes_de_chasses_aux_sorci%C3%A8res'
+  = 'Il démarre à la'
+  = link_to "condammnation d'Angéle de la Barthe", 'https://fr.wikipedia.org/wiki/Ang%C3%A9le_de_la_Barthe'
+  qui est considéré comme le premier procès en sorcellerie d'europe. Il constitude donc le point zero du graphique
+  (ce qui ne veut pas dire qu'il n'y a pas eu de procès avant, mais d'après les sources ils sont peux nombreux).
 
 %div{ id: :container, style: 'width:100%; height:400px;' }
+
+%p
+  Le graphique montre bien, que si le phénomène démarre à la toute fin du moyen age, il s'amplifie et explose à la
+  renaissance en trouvant son apogée pendant la guerre de trente ans. Il se calme au siècle des lumières.
+
+%h2 L'origine
+
+.img-left
+  =image_tag 'img2-small.jpg'
+
+%p
+  Cette flambée de violence semble être le fait des mutations sociales liées à la fin du système social du Moyen-Age et
+  aux divers troubles qui en ont résulté. Les sorcières on en servi de boucs émissaires à une
+  = link_to 'population en perte de repères et soumise à une violence croissante.', 'https://www.franceinter.fr/culture/la-chasse-aux-sorcieres-la-face-cachee-de-la-renaissance'
+  Pourquoi les femmes ont été plus vi
+
+
 
 =input_tag( :hidden, id: :results, data: data.results.series.to_json )

@@ -12,7 +12,7 @@ function draw_chart()
             type: 'line'
         },
         title: {
-            text: 'TOTO'
+            text: "Procès en sorcellerie comparés aux périodes de l'histoire"
         },
         plotOptions: {
             series: {
